@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    fetch("https://tc299.onrender.com/search?query=", {
+      credentials: 'include',
+      mode: 'cors'
+    }).then(response => response.json()).then(data => {
+      document.body.innerHTML += `<div>
+        <pre>${JSON.stringify(data, null, 2)}</pre>
+      </div>`;
+    })
+
+  </script>
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="title">Hello World - TC299 - FE - TEST</h1>
+</body>
+</html>
